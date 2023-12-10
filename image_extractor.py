@@ -28,7 +28,7 @@ def get_all_images(url):
         except:
             pass
         if img_url.startswith('//'):
-            img_url = 'https:'+img_url
+            img_url = f'https:{img_url}'
         if img_url.startswith("http"):
             img_url = img_url
         if is_valid(img_url):
