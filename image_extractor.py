@@ -13,6 +13,17 @@ def is_valid(url):
     return bool(parsed.netloc) and bool(parsed.scheme)
 
 def get_all_images(url):
+    '''
+    Extracts all images from the given URL.
+
+    Args:
+        url (str): The URL to extract images from.
+
+    Returns:
+        list: A list of image URLs extracted from the given URL.
+    
+    collect images from website 
+    '''
     ''' collect images from website '''
     soup = bs(requests.get(url).content,'html.parser')
     urls = []
